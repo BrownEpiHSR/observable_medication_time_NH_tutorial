@@ -17,5 +17,5 @@ The `code/` directory contains the following programs:
 - `4_tutorial_parallel_processing_macro_to_run_github.sas` - Implements a parallel processing procedure to run the code from program 3 in smaller partitions to reduce processing time and avoid disk space problems.
 - `5_tutorial_post_processing_data_concatenation_github.sas` - Concatonates partitions and cleans up final datasets.
 
-Programs were run in sequence to produce the study findings.
+Programs were run in sequence.
 Programs only contain code to run algorithm, and do not contain code used to populate tables included in the results of the manuscript.
