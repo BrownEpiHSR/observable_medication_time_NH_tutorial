@@ -48,10 +48,10 @@ libname final "P:\nhddi\a5d\Measurable_drug_time_in_NH_tutorial\data\version_dat
 	Note:
 	-Researchers often pull MDS data by target date.The Target Date reflects the time frame in which the 
 	 an assessment or record was to be completed. The exact date varies by the record time. 
-		• For an entry record (A0310F = [01]), the target date is equal to the entry date (A1600).
-		• For a discharge record (A0310F = [10, 11]) or death-in-facility record (A0310F = [12]),
+		â€¢ For an entry record (A0310F = [01]), the target date is equal to the entry date (A1600).
+		â€¢ For a discharge record (A0310F = [10, 11]) or death-in-facility record (A0310F = [12]),
 			the target date is equal to the discharge date (A2000).
-		• For all other records, the target date is equal to the assessment reference date (A2300).
+		â€¢ For all other records, the target date is equal to the assessment reference date (A2300).
 
 	-We needed to regenerate the target date variable because the one in our dataset (m3_trgt_dt) is corrupted.
 
@@ -168,7 +168,7 @@ data discharge_recs2;
 		if discharge_date < discharge_entry_date then delete;
 
 	keep bene_id_18900 discharge_entry_date discharge_ccn discharge_date discharge_type return_anticipated; 
-	format return_anticipated return_anticipatedf.
+	format return_anticipated return_anticipatedf. ;
 run; 
 
 *Deduplicate: if a resident has multiple records with the same discharge date, prioritize the record where return is not anticipated;
